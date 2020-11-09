@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 const { validationResult, check } = require('express-validator');
 
 const User = require('../models/User');
@@ -47,9 +49,26 @@ router.post(
       await user.save();
 
       // user 받기전에 jwt 생성
-      res.send('User saved');
+      // token 안에 보내는 object
+      const payload = {
+        user: {
+          id: user.id,
+        },
+      };
+
+      jwt.sign(
+        payload,
+        config.get('jwtSecret'),
+        {
+          expiresIn: 360000,
+        },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
     } catch (error) {
-      console.error(err.message);
+      console.error(error.message);
       res.status(500).send('Server Error');
     }
   }

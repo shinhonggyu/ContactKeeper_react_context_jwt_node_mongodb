@@ -3,7 +3,7 @@ const router = express.Router();
 
 // @route   GET api/auth
 // @desc    GET logged in user
-// @access  Private
+// @access  Private 로그인된 유저를 얻어오기때문
 router.get('/', (req, res) => {
   res.send('Get logged in user');
 });

@@ -3,7 +3,7 @@ const router = express.Router();
 
 // @route   GET api/contacts
 // @desc    GET all users contacts
-// @access  Private
+// @access  Private (로그인해야하기때문)
 router.get('/', (req, res) => {
   res.send('Get all contacts');
 });

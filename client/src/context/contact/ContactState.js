@@ -57,13 +57,13 @@ const ContactState = (props) => {
 
   return (
     <ContactContext.Provider
-      value=({
-        contacts: state.contacts
-      })
+      value={{
+        contacts: state.contacts,
+      }}
     >
       {props.children}
     </ContactContext.Provider>
-  )
+  );
 };
 
 export default ContactState;

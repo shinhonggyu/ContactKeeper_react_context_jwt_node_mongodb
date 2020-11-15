@@ -2,5 +2,15 @@
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#f5428d",
         "titleBar.inactiveBackground": "#f5428d"
-    }
+    },
+    "emmet.excludeLanguages": [
+
+
+        "markdown"
+    ],
+    "emmet.includeLanguages": 
+    
+    { "javascript": "javascriptreact" },
+
+    "emmet.extensionsPath": ""
 }

@@ -10,3 +10,10 @@ npm i -D nodemon concurrently
   }
 
 400: bad request
+401: 허가되지않음(익명의사용자)
+403: 로그인은 하였으나 권한이없는 사용자
+503: 서버에러 과부하,폭주
+
+몽고DB SECURITY => Network Access => IP Access List Entry to access anywhere 해결
+
+헤로쿠배포 : https://shrouded-mountain-24302.herokuapp.com/

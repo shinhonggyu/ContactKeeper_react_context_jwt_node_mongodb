@@ -1,6 +1,6 @@
 package.json 초기화 npm init -y
 
-install Dependencies: npm i express(프레임워크, router), bcryptjs, jsonwebtoken, config, express-validator(에러체크), moogoose(db와연결, 스키마생성)
+install Dependencies: npm i express(프레임워크, router), bcryptjs, jsonwebtoken, config, express-validator(에러체크), moogoose(db와연결, 모델스키마생성, DB메소드)
 
 npm i -D nodemon concurrently
 
